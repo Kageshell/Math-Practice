@@ -6,7 +6,9 @@ def choix():
         num1 = random.randint(1,100)
         num2 = random.randint(1,100)
         r = input(f'{num1} + {num2} = ')
-        if int(r) == (num1 + num2):
+        if r == "":
+            print("Réponse invalide, le résultat était", num1+num2)
+        elif int(r) == (num1 + num2):
             print("Bonne réponse !")
         else:
             print("Faux, le résultat était", num1+num2)
@@ -18,7 +20,9 @@ def choix():
         mini = min(num1,num2)
         maxi = max(num1,num2)
         r = input(f'{maxi} - {mini} = ')
-        if int(r) == (maxi - mini):
+        if r == "":
+            print("Réponse invalide, le résultat était", maxi-mini)
+        elif int(r) == (maxi - mini):
             print("Bonne réponse !")
         else:
             print("Faux, le résultat était", maxi-mini)
@@ -27,7 +31,9 @@ def choix():
         num1 = random.randint(1,20)
         num2 = random.randint(1,9)
         r = input(f'{num1} x {num2} = ')
-        if int(r) == (num1*num2):
+        if r == "":
+            print("Réponse invalide, le résultat était",num1*num2)
+        elif int(r) == (num1*num2):
             print('Bonne réponse !')
 
         else:
@@ -38,7 +44,10 @@ def choix():
         num1 = random.randrange(num2, 999, num2)
 
         r = input(f'{num1} : {num2} = ')
-        if int(r) == (num1//num2):
+
+        if r == "":
+            print("Réponse invalide, le résultat était",num1//num2)
+        elif int(r) == (num1//num2):
             print("Bonne réponse !")
 
         else:
